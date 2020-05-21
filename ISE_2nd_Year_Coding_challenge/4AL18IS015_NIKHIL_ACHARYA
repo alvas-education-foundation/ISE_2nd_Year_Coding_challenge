@@ -1,0 +1,19 @@
+1)Problem statement:
+			You have to complete the function void update(int *a,int *b), which reads two integers as argument, and sets A  with the sum of them, and B with the absolute difference of them.
+Language: c
+#include <stdio.h>
+
+void update(int *a,int *b) {
+    // Complete this function    
+}
+
+int main() {
+    int a, b;
+    int *pa = &a, *pb = &b;
+    
+    scanf("%d %d", &a, &b);
+    update(pa, pb);
+    printf("%d\n%d", a, b);
+
+    return 0;
+}
