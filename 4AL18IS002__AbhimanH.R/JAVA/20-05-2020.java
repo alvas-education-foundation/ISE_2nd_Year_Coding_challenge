@@ -26,13 +26,13 @@ public class Solution {
 						    }
 }
 
-
+/*
 2)Objective
 In this challenge, we're going to use loops to help us do some simple math.
 
 Task
 Given an integer, , print its first  multiples. Each multiple  (where ) should be printed on a new line in the form: N x i = result.
-
+*/
 
 import java.io.*;
 import java.util.*;
@@ -55,11 +55,11 @@ public class Solution {
 }
 
 
-3. Java's System.out.printf function can be used to print formatted output. The purpose of this exercise is to test your understanding of formatting output using printf.
+/*3. Java's System.out.printf function can be used to print formatted output. The purpose of this exercise is to test your understanding of formatting output using printf.
 
 To get you started, a portion of the solution is provided for you in the editor; you must format and print the input to complete the solution.
 
-
+*/
 import java.io.*;
 import java.util.*;
 import java.text.*;
