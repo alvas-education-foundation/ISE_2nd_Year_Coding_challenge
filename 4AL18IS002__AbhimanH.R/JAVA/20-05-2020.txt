@@ -1,6 +1,6 @@
-// 1.In this challenge, you must read an integer, a double, and a String from stdin, then print the values according to the instructions in the Output Format section below. To make the problem a little easier, a portion of the code is provided for you in the editor.
+1.In this challenge, you must read an integer, a double, and a String from stdin, then print the values according to the instructions in the Output Format section below. To make the problem a little easier, a portion of the code is provided for you in the editor.
 
-// Note: We recommend completing Java Stdin and Stdout I before attempting this challenge.
+Note: We recommend completing Java Stdin and Stdout I before attempting this challenge.
 
 
 import java.io.*;
@@ -87,7 +87,7 @@ public class Solution {
     }
 }
 
-/*
+
 4. Given a time in 12 -hour AM/PM format, convert it to military (24-hour) time.
 
 Note: Midnight is 12:00:00AM on a 12-hour clock, and 00:00:00 on a 24-hour clock. Noon is 12:00:00PM on a 12-hour clock, and 12:00:00 on a 24-hour clock.
@@ -100,11 +100,8 @@ timeConversion has the following parameter(s):
 
 s: a string representing time in  hour format
 
+
 code:
-
-*/
-
-
 import java.io.*;
 import java.util.*;
 import java.text.*;

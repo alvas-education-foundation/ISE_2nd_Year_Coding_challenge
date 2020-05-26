@@ -1,4 +1,4 @@
-1.STUDENTS MARKS SUM
+//1.STUDENTS MARKS SUM
 
 #include <stdio.h>
 #include <string.h>
@@ -35,7 +35,7 @@ int main() {
     return 0;
 }
 
-2.SUM AND DIFFERENCES OF TWO NUMBERS
+//2.SUM AND DIFFERENCES OF TWO NUMBERS
 
 #include <stdio.h>
 #include <string.h>
@@ -53,7 +53,7 @@ int main()
     return 0;
 }
 
-3.BITWISE OPERATORS
+//3.BITWISE OPERATORS
 
 #include <stdio.h>
 #include <string.h>
@@ -114,7 +114,7 @@ int main() {
     return 0;
 }
 
-4.POINTERS IN C
+//4.POINTERS IN C
 
 #include <stdio.h>
 
