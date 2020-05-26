@@ -1,3 +1,4 @@
+//Just try to Write a c Program to divide an integer by 4 without using ‘/’ operator.
 #include<stdio.h>
  
 int main()
