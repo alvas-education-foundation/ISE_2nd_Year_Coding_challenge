@@ -1,0 +1,95 @@
+1. write c/c++ program to find sum of two integers without using ‘+’ operator.
+
+#include<stdio.h>
+#include<conio.h>
+int add(int, int);
+main() {
+int a,b,sum;
+printf("enter two numbers:");
+scanf("%d %d",&a,&b);
+sum=add(a,b);
+printf("%d\n",sum);
+
+}
+
+int add(int a,int b)
+{
+int sum,carry;
+if (b == 0)
+return a;
+else
+sum = a^b; 
+carry = (a&b) << 1;
+return add(sum,carry); 
+}
+
+2.write c/c++ program to find Maximum and minimum of two numbers without using any loop or condition.
+#include<stdio.h> 
+  
+/*Function to find minimum of x and y*/
+int min(int x, int y) 
+{ 
+return y ^ ((x ^ y) & -(x < y)); 
+} 
+  
+/*Function to find maximum of x and y*/
+int max(int x, int y) 
+{ 
+return x ^ ((x ^ y) & -(x < y));  
+} 
+  
+/* Driver program to test above functions */
+int main() 
+{ 
+int x = 15; 
+int y = 6; 
+printf("Minimum of %d and %d is ", x, y); 
+printf("%d", min(x, y)); 
+printf("\nMaximum of %d and %d is ", x, y); 
+printf("%d", max(x, y)); 
+getchar(); 
+} 
+3. write c/c++ program to divide a number by 4 without using / operator
+
+#include <stdio.h>
+#include <stdlib.h
+unsigned division(unsigned x, unsigned y)
+{
+	if (x < y) {
+		printf("Remainder is %d\n", x);
+		return 0;
+	}
+
+	return 1 + division(x - y, y);
+}
+
+// Wrapper over division() function to handle negative dividend or divisor
+int divide(int x, int y)
+{
+	// handle divisibility by 0
+	if (y == 0)
+	{
+		printf("Error!! Divisible by 0");
+		exit(1);
+	}
+
+	// store sign of the result
+	int sign = 1;
+	if (x * y < 0)
+		sign = -1;
+
+	return sign * division(abs(x), abs(y));
+}
+
+
+int main(void)
+{
+	int dividend = 12;
+	int divisor = 4;
+
+	printf("Quotient is %d\n", divide(dividend, divisor));
+
+	return 0;
+}
+
+
