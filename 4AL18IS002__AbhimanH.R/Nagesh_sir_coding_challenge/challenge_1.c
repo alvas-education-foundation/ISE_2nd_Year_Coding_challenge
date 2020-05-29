@@ -32,7 +32,7 @@ return x ^ ((x ^ y) & -(x < y));
 } 
 int main() 
 { 
-int x = 15; 
+int x = 25; 
 int y = 6; 
 printf("minimum of %d and %d is\n ", x, y); 
 printf("%d", min(x, y)); 
