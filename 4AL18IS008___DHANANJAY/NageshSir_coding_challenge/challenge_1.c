@@ -1,4 +1,4 @@
-//1. write c/c++ program to find sum of two integers without using ‘+’ operator.
+//1. write c/c++ program to find sum of two integers without using â€˜+â€™ operator.
 
 
 #include<stdio.h>
