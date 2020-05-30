@@ -1,39 +1,40 @@
-// 1.Sorting of a Set of Strings in Ascending alphabetical order.
+/* 1.... C Program â€“ Sorting of a Set of Strings in Ascending alphabetical order */
 
 
 #include<stdio.h>
 #include<string.h>
-int main()
-{
+int main(){
    int i,j,count;
    char str[25][25],temp[25];
-   	puts("How many strings u are going to enter?: ");
+   puts("How many strings u are going to enter?: ");
    scanf("%d",&count);
-	puts("Enter Strings one by one: ");
+
+   puts("Enter Strings one by one: ");
    for(i=0;i<=count;i++)
       gets(str[i]);
    for(i=0;i<=count;i++)
-      for(j=i+1;j<=count;j++)
-      {
-         if(strcmp(str[i],str[j])>0)
-	{
-          strcpy(temp,str[i]);
-          strcpy(str[i],str[j]);
-          strcpy(str[j],temp);
-        }
+      for(j=i+1;j<=count;j++){
+         if(strcmp(str[i],str[j])>0){
+            strcpy(temp,str[i]);
+            strcpy(str[i],str[j]);
+            strcpy(str[j],temp);
+         }
       }
    printf("Order of Sorted Strings:");
-    for(i=0;i<=count;i++)
+   for(i=0;i<=count;i++)
       puts(str[i]);
-      return 0;
+   
+   return 0;
 }
 
 
+
+
 /*
-2. Find the 15th term of the series?
+2.... Find the 15th term of the series?
 0,0,7,6,14,12,21,18, 28
-Explanation : In this series the odd term is increment of 7 {0, 7, 14, 21, 28, 35 – – – – – – }
-              And even term is a increment of 6 {0, 6, 12, 18, 24, 30 – – – – – – }
+Explanation : In this series the odd term is increment of 7 {0, 7, 14, 21, 28, 35 â€“ â€“ â€“ â€“ â€“ â€“ }
+              And even term is a increment of 6 {0, 6, 12, 18, 24, 30 â€“ â€“ â€“ â€“ â€“ â€“ }
 */
 
 
@@ -71,7 +72,9 @@ int a2(int x)
 
 
 
-/*
+
+
+	/* 3....
 3. The program will recieve 3 English words inputs from STDIN
 1.These three words will be read one at a time, in three separate line
 2.The first word should be changed like all vowels should be replaced by %
@@ -81,7 +84,7 @@ int a2(int x)
   Other than these concatenated word, no other characters/string should or message should be written to STDOUT
 For example if you print how are you then output should be h%wa#eYOU.
 You can assume that input of each word will not exceed more than 5 chars
-*/
+	*/
 
 
 #include<stdio.h>
