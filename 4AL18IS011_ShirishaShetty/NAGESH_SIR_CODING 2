@@ -1,0 +1,110 @@
+/*write c/c++ Program to print following stars sequence
+        *
+      * *
+    * * *
+  * * * *
+* * * * * */
+
+
+
+#include <iostream> 
+using namespace std; 
+  
+
+void pypart2(int n) 
+{ 
+    
+    int k = 2 * n - 2; 
+  
+    
+    for (int i = 0; i < n; i++) { 
+  
+        
+        for (int j = 0; j < k; j++) 
+            cout << " "; 
+  
+         
+        k = k - 2; 
+  
+        
+        for (int j = 0; j <= i; j++) { 
+            
+            cout << "* "; 
+        } 
+  
+       
+        cout << endl; 
+    } 
+} 
+  
+
+int main() 
+{ 
+    int n = 5; 
+    pypart2(n); 
+    return 0; 
+}
+
+// 2.write c/c++ Program to show multiplication table (till 10) of a number using functions.
+#include<iostream>
+
+using namespace std;
+
+int main()
+
+{
+
+    int num;
+
+cout<<"Enter Number To Find Multiplication table ";
+
+cin>>num;
+
+    for(int a=1;a<=10;a++)
+
+    {
+
+        cout<<num<<" * "<<a<<" = "<<num*a<<endl;
+
+    }
+
+  return 0;
+
+}
+
+
+// 3. c/c++ program for removing the duplicate element in an array.
+#include <stdio.h>
+int main()
+{
+  int n, a[100], b[100], count = 0, c, d;
+
+  printf("Enter number of elements in array\n");
+  scanf("%d", &n);
+
+  printf("Enter %d integers\n", n);
+
+  for (c = 0; c < n; c++)
+    scanf("%d", &a[c]);
+
+  for (c = 0; c < n; c++)
+  {
+    for (d = 0; d < count; d++)
+    {
+      if(a[c] == b[d])
+        break;
+    }
+    if (d == count)
+    {
+      b[count] = a[c];
+      count++;
+    }
+  }
+
+  printf("Array obtained after removing duplicate elements:\n");
+
+  for (c = 0; c < count; c++)
+    printf("%d\n", b[c]);
+
+  return 0;
+}
