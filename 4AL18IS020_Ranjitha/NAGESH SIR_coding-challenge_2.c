@@ -1,10 +1,10 @@
 /* 1. write c Program to print following stars sequence:
 
         *
-      **
-    ***
-  ****
-*****
+       **
+      ***
+     ****
+    *****
 
 */
 
