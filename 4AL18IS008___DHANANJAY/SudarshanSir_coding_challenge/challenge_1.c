@@ -165,7 +165,7 @@ int main()
     return 0;
 }
 
-*/3.Given an array,A, of  N integers and an array, W, representing the respective weights of A's elements, 
+/*3.Given an array,A, of  N integers and an array, W, representing the respective weights of A's elements, 
 calculate and print the weighted mean of A's elements. Your answer should be rounded to a scale of  decimal place
 Input format:
 The first line contains an integer, N, denoting the number of elements in arrays A and W.
