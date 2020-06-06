@@ -21,45 +21,45 @@ public class Main
   public static void main(String[] args)
     {
         int i, j, space, k = 0, n;
-        System.out.print(“\nEnter the number of rows : “);
+        System.out.print(â€œ\nEnter the number of rows : â€œ);
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
         System.out.println();
 
         for (i = 1; i <= n; i++)
         {
-            for (j = 1; j <= n – i; j++)
+            for (j = 1; j <= n â€“ i; j++)
             {
-                System.out.print(” “);
+                System.out.print(â€ â€œ);
             }	
-            while (k != (2 * i – 1))
+            while (k != (2 * i â€“ 1))
             {
-                if ((k == 0) || (k == 2 * i – 2))
-                    System.out.print(“*”);
+                if ((k == 0) || (k == 2 * i â€“ 2))
+                    System.out.print(â€œ*â€);
                 else
-                    System.out.print(” “);
+                    System.out.print(â€ â€œ);
                 k++;
             }
             k = 0;
-            System.out.print(“\n”);
+            System.out.print(â€œ\nâ€);
         }
-        n–;
-        for (i = n; i >= 1; i–)	
+        nâ€“;
+        for (i = n; i >= 1; iâ€“)	
         {
-            for (j = 0; j <= n – i; j++)
+            for (j = 0; j <= n â€“ i; j++)
             {
-                System.out.print(” “);
+                System.out.print(â€ â€œ);
             }
             k = 0;	
-            while (k != (2 * i – 1))
+            while (k != (2 * i â€“ 1))
             {
-                if ((k == 0) || (k == 2 * i – 2))
-                    System.out.print(“*”);
+                if ((k == 0) || (k == 2 * i â€“ 2))
+                    System.out.print(â€œ*â€);
                 else
-                    System.out.print(” “);
+                    System.out.print(â€ â€œ);
                 k++;
             }
-            System.out.print(“\n”);
+            System.out.print(â€œ\nâ€);
         }	
     }
 }
@@ -147,8 +147,8 @@ int Convert(long int number)
 int main()
 {
     long int number;
-    printf(“\nEnter the number : “);
-    scanf(“%d”, &number);
-    printf(“\nNumber after replacement : %dn”, Convert(number));
+    printf(â€œ\nEnter the number : â€œ);
+    scanf(â€œ%dâ€, &number);
+    printf(â€œ\nNumber after replacement : %dnâ€, Convert(number));
     return 0;
 }
