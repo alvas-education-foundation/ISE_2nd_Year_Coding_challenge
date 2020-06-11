@@ -1,0 +1,189 @@
+﻿/*1.Program to replace all 0's with 1 in a given integer is discussed here. Given an integer as an input, all the 0's in the number has to be replaced with 1.
+For example, consider the following number
+ 
+Input: 102405
+Output: 112415
+Input: 56004
+Output: 56114
+
+*/
+
+
+
+
+
+#include<stdio.h>
+
+int replace(long int number)
+{
+   
+  if (number == 0)
+ return 0;
+ int digit = number % 10;
+ if (digit == 0)
+ digit = 1;
+ return replace(number/10) * 10 + digit;
+}
+
+int Convert(long int number)
+{
+ if (number == 0)
+ return 1;
+ else
+ return replace(number);
+}
+
+int main()
+{
+    long int number;
+    printf(“\nEnter the number : “);
+    scanf(“%d”, &number);
+    printf(“\nNumber after replacement : %dn”, Convert(number));
+    return 0;
+}
+
+
+
+#############################################################################################################################
+
+
+
+/*2.Hollow diamond pattern printing using stars
+ 
+Input: 5
+ 
+Output:
+
+    *
+   *  * 
+  *    *
+ *      *  
+*        *  
+*        *
+ *      *
+  *    *  
+   *  * 
+     *
+*/
+
+
+
+
+
+
+import java.util.*;
+
+public class Main
+{
+
+    public static void main(String[] args)
+    {
+
+        int i, j, space, k = 0, n;
+        System.out.print(“\nEnter the number of rows : “);
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+        System.out.println();
+
+        for (i = 1; i <= n; i++)
+        {
+            for (j = 1; j <= n – i; j++)
+            {
+                System.out.print(” “);
+            }	
+            while (k != (2 * i – 1))
+            {
+                if ((k == 0) || (k == 2 * i – 2))
+                    System.out.print(“*”);
+                else
+                    System.out.print(” “);
+                k++;
+            }
+            k = 0;
+            System.out.print(“\n”);
+        }
+        n–;
+        for (i = n; i >= 1; i–)	
+        {
+            for (j = 0; j <= n – i; j++)
+            {
+                System.out.print(” “);
+            }
+            k = 0;	
+            while (k != (2 * i – 1))
+            {
+                if ((k == 0) || (k == 2 * i – 2))
+                    System.out.print(“*”);
+                else
+                    System.out.print(” “);
+                k++;
+            }
+            System.out.print(“\n”);
+        }	
+    }
+}
+
+
+
+############################################################################################################################################
+
+
+
+/*3.Rotate the matrix by K times means rotating the given N*N matrix to the specified (K) number of times. For example, consider the 3*3 matrix, which has to be rotated once,
+Matrix before Rotation :
+10  20  30                                 
+40  50  60          
+70  80  90                            
+
+ 
+Matrix after rotation : 
+20  30  10
+50  60  40
+80  90  70
+
+*/
+
+
+
+
+
+public class Main
+{ 
+     
+    static final int M=3; 
+    static final int N=3;  
+    static void rotateMatrix(int matrix[][], int k) 
+    { 
+ int temp[]=new int[M]; 
+
+ k = k % M; 
+for (int i = 0; i < N; i++) 
+ { 
+ for (int t = 0; t < M - k; t++) 
+ temp[t] = matrix[i][t];             
+ for (int j = M - k; j < M; j++) 
+ matrix[i][j - M + k] = matrix[i][j]; 
+ for (int j = k; j < M; j++) 
+ matrix[i][j] = temp[j - k]; 
+        } 
+ }  
+static void printMatrix(int matrix[][]) 
+    { 
+        for (int i = 0; i < N; i++) 
+        { 
+            for (int j = 0; j < M; j++) 
+                System.out.print(matrix[i][j] + " "); 
+            System.out.println(); 
+        } 
+    } 
+    public static void main (String[] args) 
+    { 
+        int matrix[][] = {{1,2,3} ,{4,5,6} ,{7,8,9}}; 
+        System.out.println("The inputted matrix : ");
+        printMatrix(matrix);
+        int k = 2; 
+        rotateMatrix(matrix, k);  
+        System.out.println("\nThe Rotated Matrix : \n");
+        printMatrix(matrix); 
+    } 
+}
