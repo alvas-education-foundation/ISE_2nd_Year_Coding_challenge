@@ -1,4 +1,5 @@
-/* 1...	write c/c++ Program to print following stars sequence:
+/* 
+	1...	write c/c++ Program to print following stars sequence:
 	*
 	**
 	***
@@ -30,9 +31,9 @@ int main()
 }
 
 
- 
+ --------------------------------------------------------------------------------------------------------------------------------------------
 
-	/* 2.....write c/c++ Program to show multiplication table (till 10) of a number using functions.   */
+	/*    2.....write c/c++ Program to show multiplication table (till 10) of a number using functions.   */
 
 
 #include <stdio.h>
@@ -51,6 +52,8 @@ int main()
      return 0;
 }
 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
       /*    3.....write c/c++ program for removing the duplicate element in an array.
 	Sample Output:
