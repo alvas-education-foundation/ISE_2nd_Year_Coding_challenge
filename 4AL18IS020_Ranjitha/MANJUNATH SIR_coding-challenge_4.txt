@@ -1,0 +1,201 @@
+// 1.   C Program To Check for Balanced Parentheses using Stack 
+
+
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#define MAX 30
+int top=-1;
+int stack[MAX];
+void push(char);
+char pop();
+int match(char a,char b);
+int check(char []);
+int main()
+{
+        char exp[MAX];
+        int valid;
+        printf("Enter an algebraic expression : ");
+        gets(exp);
+        valid=check(exp);
+        if(valid==1)
+                printf("Valid expression\n");
+        else
+                printf("Invalid expression\n");
+
+                return 0;
+
+}
+int check(char exp[] )
+{
+        int i;
+        char temp;
+        for(i=0;i<strlen(exp);i++)
+        {
+                if(exp[i]=='(' || exp[i]=='{' || exp[i]=='[')
+                        push(exp[i]);
+                if(exp[i]==')' || exp[i]=='}' || exp[i]==']')
+                        if(top==-1)  
+                        {
+                                printf("Right parentheses are more than left parentheses\n");
+                                return 0;
+                        }
+                        else
+                        {
+                                temp=pop();
+                                if(!match(temp, exp[i]))
+                                {
+                                        printf("Mismatched parentheses are : ");
+                                        printf("%c and %c\n",temp,exp[i]);
+                                        return 0;
+                                }
+                        }
+        }
+        if(top==-1) 
+        {
+                printf("Balanced Parentheses\n");
+                return 1;
+        }
+        else
+        {
+                printf("Left parentheses more than right parentheses\n");
+                return 0;
+        }
+}
+int match(char a,char b)
+{
+        if(a=='[' && b==']')
+                return 1;
+        if(a=='{' && b=='}')
+                return 1;
+        if(a=='(' && b==')')
+                return 1;
+        return 0;
+}
+
+void push(char item)
+{
+        if(top==(MAX-1))
+        {
+                printf("Stack Overflow\n");
+                return;
+        }
+        top=top+1;
+        stack[top]=item;
+}
+
+char pop()
+{
+        if(top==-1)
+        {
+                printf("Stack Underflow\n");
+                exit(1);
+        }
+        return(stack[top--]);
+}
+
+
+
+// 2.  Program to find the median of two sorted arrays of different size
+
+
+#include <stdio.h>  
+int getMedian(int ar1[], int ar2[], int n, int m)  
+{  
+    int i = 0;
+    int j = 0; 
+    int count;  
+    int m1 = -1, m2 = -1;  
+    if((m + n) % 2 == 1) { 
+        for (count = 0; count <= (n + m)/2; count++) { 
+            if(i != n && j != m){ 
+            m1 = (ar1[i] > ar2[j]) ? ar2[j++] : ar1[i++]; 
+            } 
+            else if(i < n){ 
+            m1 = ar1[i++]; 
+            } 
+            else{ 
+            m1 = ar2[j++]; 
+            } 
+        } 
+        return m1; 
+    } 
+    else { 
+        for (count = 0; count <= (n + m)/2; count++) { 
+            m2 = m1; 
+            if(i != n && j != m){ 
+            m1 = (ar1[i] > ar2[j]) ? ar2[j++] : ar1[i++]; 
+            } 
+            else if(i < n){ 
+            m1 = ar1[i++]; 
+            }  
+            else{ 
+            m1 = ar1[j++]; 
+            } 
+        } 
+        return (m1 + m2)/2; 
+    } 
+}
+int main()  
+{  
+    int ar1[] = {900};  
+    int ar2[] = {5, 8, 10, 20};  
+  
+    int n1 = sizeof(ar1)/sizeof(ar1[0]);  
+    int n2 = sizeof(ar2)/sizeof(ar2[0]);  
+    printf("%d", getMedian(ar1, ar2, n1, n2));  
+    getchar();  
+    return 0;  
+} 
+
+
+
+// 3.  Program to check if given expression contains redundant braces
+
+
+#include <iostream> 
+#include <stack> 
+using namespace std; 
+bool redundant_braces(string& str) 
+{ 
+    stack<char> st; 
+    for (auto& ch : str) { 
+        if (ch == ')') { 
+            char top = st.top(); 
+            st.pop(); 
+            bool flag = true;
+            while (top != '(') { 
+                if (top == '+' || top == '-' ||  top == '*' || top == '/') 
+                    flag = false; 
+                top = st.top(); 
+                st.pop(); 
+            } 
+            if (flag == true) 
+                return true; 
+        } 
+        else
+            st.push(ch); 
+    } 
+    return false; 
+} 
+void redundancy_check(string& str) 
+{ 
+    bool ans = redundant_braces(str); 
+    if (ans == true) 
+        cout << "Yes\n"; 
+    else
+        cout << "No\n"; 
+} 
+int main() 
+{ 
+    string str = "(a*b-(c+d))"; 
+    redundancy_check(str); 
+    str = "((a+b))"; 
+    redundancy_check(str); 
+    str = "(a/b*((c-d)))"; 
+    redundancy_check(str); 
+    return 0; 
+} 
+
+
+ 
