@@ -1,10 +1,4 @@
-1. Program to check for balanced parenthesis with and without using stack is discussed here. You can develop a parenthesis checker without using stack as well. But using stack can have several advantages.
-
-•Using a stack to balance parenthesis will help you balance different types of grouping operators such as[],{}and()and verify that they are correctly nested.
-•Using a stack will also help improve the efficiency of the code
-
-
-
+//1. Program to check for balanced parenthesis with and without using stack is discussed here. You can develop a parenthesis checker without using stack as well. 
 
 
 #include
@@ -53,9 +47,13 @@ void psh(char a)
 {
    return st[top–];
 }
-#############################################################################################################################################
-2. Program to find the median of two sorted arrays of same size and different size are discussed here. Firstly, let us see what is median of the array?
-Median is an element which divides the array into two parts - left and right. So the number of elements on the left side of the array will be equal or less than the number of elements on the right side. Now, let us consider the case of an array with odd number of elements.
+
+
+
+/*2. Program to find the median of two sorted arrays of same size and different size are discussed here. Firstly, let us see what is median of the array?
+Median is an element which divides the array into two parts - left and right. So the number of elements on the left side of the array will be equal or less than the number of elements on the right side. Now, let us consider the case of an array with odd number of elements.*/
+
+
 #include<stdio.h>
 int Calculate_median(int a1[], int a2[], int n)
 {
@@ -106,14 +104,18 @@ int main()
         scanf(“%d”,&a2[i]);
     printf(“Median: %d”, Calculate_median(a1, a2, n));
     return 0;
-}
-##############################################################################################################################
-3. Program to check if given expression contains redundant braces
+
+
+
+/*3. Program to check if given expression contains redundant braces
 Published on 06 Mar 2020
 A string of characters is given as input and it is checked if it has redundant braces or not. This can be done using stacks as it is one of the important applications of stack data structure. If the expression or sub-expression is surrounded by extra or unnecessary braces, then the expression is said to have redundant brackets.
 For example:
 (( a - b )) has redundant brackets as it is having an extra set of parenthesis.
-(( a * b ) - (c) + d) has redundant brackets as (c) is having unnecessary braces.
+(( a * b ) - (c) + d) has redundant brackets as (c) is having unnecessary braces.*/
+
+
+
 #include <iostream> 
 #include <stack> 
 using namespace std; 
