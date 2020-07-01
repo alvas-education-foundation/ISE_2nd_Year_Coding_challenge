@@ -1,0 +1,11 @@
+Challenge-1: write c/c++ program to find sum of two integers without using ‘+’ operator.
+ 
+int add(int a,int b)
+{
+ int sum,carry;
+ if(b==0)
+  return a;
+  sum=a^b;
+  carry=(a&b)<<1;
+  return add(sum,carry);
+}
