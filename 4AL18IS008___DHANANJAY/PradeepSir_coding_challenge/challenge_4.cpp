@@ -66,11 +66,11 @@ public sample(long x,long y)
 void cal()
 {
 
-cout<<“1+x+x^2+……+x^n”;
+cout<<â€œ1+x+x^2+â€¦â€¦+x^nâ€;
 
 for(i=1;i<=n;++i)
 sum+=pow(x,i);
-cout<<“nSum=”<<sum;
+cout<<â€œnSum=â€<<sum;
 
 }
 getch(); //to stop the screen
