@@ -100,22 +100,22 @@ int Calculate_median(int a1[], int a2[], int n)
 int main()
 {
     int n, i;
-    printf(“Enter the size: “);
-    scanf(“%d”,&n);
+    printf(â€œEnter the size: â€œ);
+    scanf(â€œ%dâ€,&n);
     int a1[n], a2[n];
-    printf(“\n Enter the first Array elements: \n”);
+    printf(â€œ\n Enter the first Array elements: \nâ€);
     for(i=0; i<n; i++)
-        scanf(“%d”,&a1[i]);
-    printf(“\n Enter the Second Array elements: \n”);
+        scanf(â€œ%dâ€,&a1[i]);
+    printf(â€œ\n Enter the Second Array elements: \nâ€);
     for(i=0; i<n; i++)
-        scanf(“%d”,&a2[i]);
-    printf(“Median: %d”, Calculate_median(a1, a2, n));
+        scanf(â€œ%dâ€,&a2[i]);
+    printf(â€œMedian: %dâ€, Calculate_median(a1, a2, n));
     return 0;
 }
 
 /* 3.Program to check for balanced parenthesis with and without using stack is discussed here. You can develop a parenthesis checker without using stack as well. But using stack can have several advantages.
-•Using a stack to balance parenthesis will help you balance different types of grouping operators such as[],{}and()and verify that they are correctly nested.
-•Using a stack will also help improve the efficiency of the code
+â€¢Using a stack to balance parenthesis will help you balance different types of grouping operators such as[],{}and()and verify that they are correctly nested.
+â€¢Using a stack will also help improve the efficiency of the code
 */
 
 
@@ -129,23 +129,23 @@ int main()
 {
     char a[20],t;
     int i,f=1;
-    scanf(“%s”,a);
+    scanf(â€œ%sâ€,a);
     for(i=0;i<strlen(a);i++)
     {
-        if(a[i]=='(‘||a[i]=='{‘||a[i]=='[‘)
+        if(a[i]=='(â€˜||a[i]=='{â€˜||a[i]=='[â€˜)
            psh(a[i]);
-            if(a[i]==’)’||a[i]==’}’||a[i]==’]’)
+            if(a[i]==â€™)â€™||a[i]==â€™}â€™||a[i]==â€™]â€™)
         {
             if(top==-1)
                 f=0;
             else
             {
 		t=pop();
-             if(a[i]==’)’&&(t=='[‘||t=='{‘))
+             if(a[i]==â€™)â€™&&(t=='[â€˜||t=='{â€˜))
                  f=0;
-             if(a[i]==’}’&&(t=='(‘||t=='[‘))
+             if(a[i]==â€™}â€™&&(t=='(â€˜||t=='[â€˜))
                   f=0;
-             if(a[i]==’]’&&(t=='{‘||t=='(‘))
+             if(a[i]==â€™]â€™&&(t=='{â€˜||t=='(â€˜))
                   f=0;
             }
         }
@@ -153,9 +153,9 @@ int main()
            if(top>=0)
               f=0;
            if(f==0)
-              printf(“Unbalanced\n”);
+              printf(â€œUnbalanced\nâ€);
            else
-              printf(“Balanced\n”);
+              printf(â€œBalanced\nâ€);
    return 0;
 }
 void psh(char a)
@@ -164,5 +164,5 @@ void psh(char a)
 }
  char pop()          
 {
-   return st[top–];
+   return st[topâ€“];
 }
