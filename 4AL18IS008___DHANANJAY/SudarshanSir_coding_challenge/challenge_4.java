@@ -202,9 +202,9 @@ Input Format
 The first line contains an integer, T, the number of test cases.
 Each of the T subsequent lines contains an integer, n, to be tested for primality.
 Constraints
-•	T={1 to 30}
-•	n={ 1 to 2*109}
-•	
+â€¢	T={1 to 30}
+â€¢	n={ 1 to 2*109}
+â€¢	
 Output Format
 For each test case, print whether n is  Prime or Not-Prime
 */
@@ -225,7 +225,7 @@ public class Solution
      {
        int N = sc.nextInt();
 
-       if (N < 2 || (N > 2 && (N&1) == 0)) System.out.println(“Not prime“);
+       if (N < 2 || (N > 2 && (N&1) == 0)) System.out.println(â€œNot primeâ€œ);
        else
         {
           boolean isPrime = true;
@@ -237,7 +237,7 @@ public class Solution
                  break;
                }
            }
-             System.out.println(isPrime?“Prime“:“Not prime“);
+             System.out.println(isPrime?â€œPrimeâ€œ:â€œNot primeâ€œ);
         }
       }
    }
